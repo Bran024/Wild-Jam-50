@@ -1,0 +1,47 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Have you gathered the required components?"
+		},
+		{
+			"choice": "Yes, Master!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Do not toy with me, assistant! Gather the materials!"
+		},
+		{
+			"choice": "No, Master!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hop to it, then!"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1665852477.json",
+		"name": "Cauldron2"
+	}
+}

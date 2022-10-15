@@ -1,0 +1,37 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You have just arrived back from doing errands for your master.*\n*The hut is warm and well lit, and a peculiar smell is wafting from the den.*"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My faithful assistant, thank the void that you have returned!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You pause at hearing your master's voice, but you do not see them anywhere*"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Into the den, please! I have an urgent task for you."
+		},
+		{
+			"emit_signal": "increase dialog index",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1665789120.json",
+		"name": "Cauldron0"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "*Tarmolg's Treatise on Transmutation* is open, care to read the passage?*"
+		},
+		{
+			"choice": "Yes.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Transmutation of life spirit between two living vessels is not inherently dangerous. The majority of the danger stems from ill mindset of one of the vessels. If both vessels are concious and willing, the transmutation holds no more risk than any other mundane task.*\n*Of course, it is rare to find a living soul that will not object to their corporeal form being the host to another.*"
+		},
+		{
+			"choice": "No.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "**technical example of interactables in the world**"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1665856054.json",
+		"name": "Book10"
+	}
+}

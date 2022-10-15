@@ -1,0 +1,21 @@
+{
+	"color": "#ff16ff02",
+	"description": "",
+	"display_name": "Master",
+	"display_name_bool": true,
+	"id": "character-1665788999.json",
+	"mirror_portraits": false,
+	"name": "Cauldron",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

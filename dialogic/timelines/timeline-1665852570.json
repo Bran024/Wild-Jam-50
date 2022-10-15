@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Have you gathered the required components?"
+		},
+		{
+			"choice": "Yes, Master!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Excellent, my dear assistant!\nPlease put them into the cauldron and we shall prepare for the next phase of the ritu-\nERM the counter-spell for my grave, grave error!"
+		},
+		{
+			"choice": "No, Master!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My dear assistant...\nThough not tethered to my corporeal vessel, even I can smell the earthy stink of moss.\nAlso a Noogut feather is sticking out of your pocket.\nPut it all into the cauldron and let us continue on with the ritu-\nERM the counter-spell for my grave, grave error!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_timeline": "timeline-1665853100.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1665852570.json",
+		"name": "Cauldron3"
+	}
+}

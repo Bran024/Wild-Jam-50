@@ -1,0 +1,196 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cauldron.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Feather.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Moss.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Kenney High.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Book.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1112.5, 91.5 )
+
+[node name="Test" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -620.0
+margin_top = -372.0
+margin_right = 1524.0
+margin_bottom = 999.0
+color = Color( 0.398438, 0.268624, 0.154083, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -652.0
+margin_top = -368.0
+margin_right = -296.0
+margin_bottom = 1034.0
+color = Color( 0.117647, 0.0627451, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 1071.0
+margin_top = -307.0
+margin_right = 1427.0
+margin_bottom = 1095.0
+color = Color( 0.117647, 0.0627451, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = -304.0
+margin_top = -101.0
+margin_right = 52.0
+margin_bottom = 1461.0
+rect_rotation = -90.0
+color = Color( 0.117647, 0.0627451, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = -341.0
+margin_top = 1267.0
+margin_right = 15.0
+margin_bottom = 2810.0
+rect_rotation = -90.0
+color = Color( 0.117647, 0.0627451, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 667.0
+margin_top = 148.0
+margin_right = 885.0
+margin_bottom = 201.0
+custom_fonts/font = SubResource( 2 )
+text = "mushrooms"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 659.0
+margin_top = 709.0
+margin_right = 877.0
+margin_bottom = 762.0
+custom_fonts/font = SubResource( 2 )
+text = "Feathers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = -60.0
+margin_top = 690.0
+margin_right = 158.0
+margin_bottom = 743.0
+custom_fonts/font = SubResource( 2 )
+text = "Moss"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = -113.0
+margin_top = 315.0
+margin_right = 105.0
+margin_bottom = 368.0
+custom_fonts/font = SubResource( 2 )
+text = "cauldron"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 516, -192 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 517, 997 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 492, 388 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 1746, 38 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 460, 585 )
+shape = SubResource( 1 )
+
+[node name="Cauldron" parent="." instance=ExtResource( 2 )]
+position = Vector2( -7, 272 )
+
+[node name="Mushroom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608, 58 )
+component_type = "Mushroom"
+component_amount = 2
+
+[node name="Mushroom2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 839, 24 )
+component_type = "Mushroom"
+component_amount = 1
+
+[node name="Mushroom3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 998, 192 )
+component_type = "Mushroom"
+component_amount = 2
+
+[node name="Moss" parent="." instance=ExtResource( 5 )]
+position = Vector2( -180, 719 )
+component_type = "Moss"
+component_amount = 2
+
+[node name="Moss2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 142, 672 )
+component_type = "Moss"
+component_amount = 2
+
+[node name="Moss3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -4, 841 )
+component_type = "Moss"
+component_amount = 2
+
+[node name="Feather" parent="." instance=ExtResource( 4 )]
+position = Vector2( 649, 631 )
+component_type = "Feather"
+component_amount = 1
+
+[node name="Feather2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 891, 616 )
+component_type = "Feather"
+component_amount = 1
+
+[node name="Feather3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 889, 839 )
+component_type = "Feather"
+component_amount = 1
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -235, -43 )
+
+[node name="Book" parent="." instance=ExtResource( 7 )]
+position = Vector2( 336, -89 )
+npc_name = "Book1"

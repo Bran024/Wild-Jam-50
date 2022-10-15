@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*end of demonstration.*\nThe Master is to have his assistant (AKA \"the player\") gather components for a ritual saying that they have accidently trapped themselves in their cauldron while doing an expirement.\nThe Master would eventually have the player choose a mundane every day item, the Master telling them it would be the intended target for the Master to store some of his life force should something unfortunate happen.\nThe reality is the Master plans to take the player's body for themselves and trap the player inside the object.\ntechnical wants:\n\tinteractable items within Master's hut that clue in to what their true objective is.\n\talternate components to gather to trick the Master into being the one that is trapped in the chosen object."
+		},
+		{
+			"emit_signal": "end demo",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1665853100.json",
+		"name": "Demo0"
+	}
+}
