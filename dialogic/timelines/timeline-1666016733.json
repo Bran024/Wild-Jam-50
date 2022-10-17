@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "*'Flub's Book to Fix Mess-ups'' is open, care to read the passage?*"
+		},
+		{
+			"choice": "Yes.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You no test balm on kitty cat like book say, now you stuck in pot!\nIt ok, Flub do too. Flub not pot no more! Flub tell you how he do it.\nFlub ask friend to get swamp mushroom and birch moss and Noogut feather.\nAbout this many:\n*There is a crude drawing of 5 mushrooms, 6 bunches of moss and 3 feathers*\nGet pot VERY HOT until balm bubbles a lot and put in stuff.\nFriend pull hair from Flub head and put in pot.\nP.S.\nDO NOT TEST ON KITTY CAT YOU WILL BE STUCK IN KITTY CAT LIKE FLUB WAS AND HAD TO DO ALL DUMB SCIENCE AGAIN!!!!"
+		},
+		{
+			"choice": "No.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666016733.json",
+		"name": "Book30"
+	}
+}

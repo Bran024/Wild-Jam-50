@@ -1,9 +1,10 @@
 extends StaticBody2D
 
+const npc_name := "Cauldron"
+
 onready var player = get_parent().find_node("Player")
 
-export(String) var npc_name = "Cauldron"
-
+var intro_complete
 var dialog_index := 0
 
 
@@ -14,7 +15,12 @@ var dialog_index := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.add_to_group(npc_name)
+	if Global.intro_complete == false:
+		self.add_to_group(npc_name)
+	if self.is_in_group(npc_name):
+		introduction()
+	if Global.intro_complete and dialog_index == 0:
+		dialog_index = 1
 	pass # Replace with function body.
 
 
@@ -22,14 +28,22 @@ func _ready():
 #func _process(delta):
 #	pass
 func _physics_process(delta):
-	if dialog_index == 0:
+	if dialog_index == 0 and Global.quest_stage == 0:
 		start_dialog()
-	if player.components_gathered:
+	if player.components_gathered and Global.quest_stage == 3:
 		dialog_index = 3
 	if player.interaction_target == npc_name and Input.is_action_just_pressed("interact"):
 		start_dialog()
 	else:
 		pass
+
+func introduction():
+	var dialog = Dialogic.start(npc_name + str(0))
+	dialog.pause_mode = PAUSE_MODE_PROCESS
+	get_parent().add_child(dialog)
+	dialog.connect("timeline_end", self, "end_dialog")
+	dialog.connect("dialogic_signal", self, "dialogic_signal_event")
+	get_tree().paused = true
 
 func _on_InteractionZone_body_entered(body):
 	if body == player:
@@ -60,7 +74,16 @@ func end_dialog(data): # data must be here or function does not work. either a b
 
 # dialogic signal reciever
 func dialogic_signal_event(param):
+	if param == "intro complete":
+		Global.intro_complete = true
+	if param == "increase quest progress":
+		Global.quest_stage += 1
 	if param == "increase dialog index":
 		dialog_index += 1
+		print("Player quest stage is: " + str(Global.quest_stage))
+	if param == "take components":
+		player.mushrooms = 0
+		player.feathers = 0
+		player.moss = 0
 	if param == "end demo":
 		get_tree().change_scene("res://Main.tscn")

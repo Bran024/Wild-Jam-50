@@ -7,7 +7,7 @@
 
 			],
 			"portrait": "",
-			"question": "*Tarmolg's Treatise on Transmutation* is open, care to read the passage?*"
+			"question": "*'Flub's Book of Good Things Found on Ground'' is open, care to read the passage?*"
 		},
 		{
 			"choice": "Yes.",
@@ -20,7 +20,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "*Transmutation of life spirit between two living vessels is not inherently dangerous. The majority of the danger stems from ill mindset of one of the vessels. If both vessels are concious and willing, the transmutation holds no more risk than any other mundane task.*\n*Of course, it is rare to find a living soul that will not object to their corporeal form being the host to another.*"
+			"text": "Red Mushroom grow in bunches - good for eat and for making sciences.\nMoss grow on dead trees. Good for eat and for nap.\nNoogut Feather look pretty in hair but not good for eat.\nFlub find more good things too but Flub find no reason to write them down..."
 		},
 		{
 			"choice": "No.",
@@ -31,12 +31,6 @@
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "**technical example of interactables in the world**"
 		},
 		{
 			"event_id": "dialogic_022",

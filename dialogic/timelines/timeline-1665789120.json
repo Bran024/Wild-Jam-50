@@ -25,7 +25,15 @@
 			"text": "Into the den, please! I have an urgent task for you."
 		},
 		{
+			"emit_signal": "increase quest progress",
+			"event_id": "dialogic_040"
+		},
+		{
 			"emit_signal": "increase dialog index",
+			"event_id": "dialogic_040"
+		},
+		{
+			"emit_signal": "intro complete",
 			"event_id": "dialogic_040"
 		}
 	],

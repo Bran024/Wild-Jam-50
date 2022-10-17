@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "*'Forbidden Rituals'' is open, care to read the passage?*"
+		},
+		{
+			"choice": "Yes.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Transferring one's soul into the vessel of another is a rather complicated and somewhat dangerous procedure.\nHave your cauldron upon a bed of embers all morning and once the water inside is just too hot to bear, add all ingredients mentioned in the previous chapter.\nThe liquid should thicken into a balm and turn a fetid shade of green and smell strongly of wet dog.\nAdd in a hair from the vessel of the soul to be transferred and prepare the new vessel to be rubbed with the balm.\nBEWARE: should the liquid be either too hot or not hot enough, there is risk of the cauldron holding your concoction inadvertently also becoing the new holder of your soul. It is recommended to first remove some of the balm and sample it upon a (living)thrall or animal."
+		},
+		{
+			"choice": "No.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666013425.json",
+		"name": "Book20"
+	}
+}

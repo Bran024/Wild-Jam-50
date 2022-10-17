@@ -142,47 +142,38 @@ shape = SubResource( 1 )
 
 [node name="Feather" parent="." instance=ExtResource( 1 )]
 position = Vector2( 999, 839 )
-component_type = "Feather"
 component_amount = 1
 
 [node name="Feather2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 839, 667 )
-component_type = "Feather"
 component_amount = 1
 
 [node name="Feather3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 733, 830 )
-component_type = "Feather"
 component_amount = 1
 
 [node name="Moss" parent="." instance=ExtResource( 3 )]
 position = Vector2( 110, 834 )
-component_type = "Moss"
 component_amount = 2
 
 [node name="Moss2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -144, 831 )
-component_type = "Moss"
 component_amount = 2
 
 [node name="Moss3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -8, 683 )
-component_type = "Moss"
 component_amount = 2
 
 [node name="Mushroom" parent="." instance=ExtResource( 7 )]
 position = Vector2( 942, 47 )
-component_type = "Mushroom"
 component_amount = 2
 
 [node name="Mushroom2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 740, -27 )
-component_type = "Mushroom"
 component_amount = 2
 
 [node name="Mushroom3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 758, 176 )
-component_type = "Mushroom"
 component_amount = 1
 
 [node name="Book" parent="." instance=ExtResource( 5 )]

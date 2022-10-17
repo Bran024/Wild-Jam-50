@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
-
-var max_health := 10
-var health := 10
+onready var spawn = get_parent().find_node("Spawn")
 
 var speed := 200
 var velocity := Vector2()
@@ -10,9 +8,13 @@ var velocity := Vector2()
 var mushrooms := 0
 var moss := 0
 var feathers := 0
+var alt_mushroom := 0
+var alt_moss := 0
+var alt_feathers := 0
 
 var inventory_opened := false
 
+var quest_stage := 0
 var can_interact := false
 var can_harvest := false
 var harvest_target := "None"
@@ -21,9 +23,14 @@ var interaction_target := "None"
 var components_gathered := false
 
 func _ready():
+	global_position = spawn.global_position
+	print("Player quest stage is: " + str(Global.quest_stage))
 	$Inventory.set_deferred("visible", false)
 
 func _physics_process(_delta):
+	mushrooms = Global.mushrooms
+	moss = Global.moss
+	feathers = Global.feathers
 	if mushrooms + moss + feathers >= 14:
 		components_gathered = true
 	if can_interact or can_harvest:
@@ -43,17 +50,28 @@ func _physics_process(_delta):
 func move_player():
 	var input_vector := Vector2()
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-	input_vector.x = Input.get_action_raw_strength("right") - Input.get_action_strength("left")
+	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	if input_vector != Vector2.ZERO:
 		velocity = speed * input_vector
 	else:
 		velocity = Vector2.ZERO * speed
 
 	velocity = velocity.normalized()
+	if input_vector.y <= 0:
+		$Sprite.frame = 1
+	if input_vector.y >= 0:
+		$Sprite.frame = 0
 	
-# warning-ignore:return_value_discarded
 	move_and_slide(velocity * speed)
 
 func open_inventory():
-	if Input.is_action_just_pressed("inventory"):
-		inventory_opened = !inventory_opened
+	var inventory_button = Input.get_action_strength("inventory")
+	if inventory_button > 0:
+		inventory_opened = true
+	else:
+		inventory_opened = false
+
+#func clear_components():
+#	mushrooms = 0
+#	moss = 0
+#	feathers = 0

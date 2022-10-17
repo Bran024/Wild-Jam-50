@@ -1,9 +1,8 @@
 extends Area2D
 
+const component_type = "Moss"
+
 onready var player = get_parent().find_node("Player")
-
-
-export(String) var component_type
 
 export(int) var component_amount
 
@@ -13,7 +12,7 @@ var harvestable = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if harvestable and Input.is_action_just_pressed("interact"):
-		player.moss += 1
+		Global.moss += 1
 		component_amount -= 1
 	if component_amount <= 0:
 		_on_InteractionZone_body_exited(player)
