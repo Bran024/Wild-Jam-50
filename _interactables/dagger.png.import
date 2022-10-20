@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mushroom_green.png-b4fa5b8e5f73d992ed97a595848dbb6a.stex"
+path="res://.import/dagger.png-03333af61d4cd1ec5faa62f1e8705958.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_components/mushroom_green.png"
-dest_files=[ "res://.import/mushroom_green.png-b4fa5b8e5f73d992ed97a595848dbb6a.stex" ]
+source_file="res://_interactables/dagger.png"
+dest_files=[ "res://.import/dagger.png-03333af61d4cd1ec5faa62f1e8705958.stex" ]
 
 [params]
 

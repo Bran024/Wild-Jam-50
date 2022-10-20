@@ -1,10 +1,14 @@
 extends Area2D
 
+
 onready var player = get_parent().find_node("Player")
 
 export(String) var npc_name
+export(String) var item_name
+export(Texture) var item_sprite
 
 var dialog_index := 0
+var interactable := false
 
 
 # Declare member variables here. Examples:
@@ -14,7 +18,10 @@ var dialog_index := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.add_to_group("books")
+	$Sprite.texture = item_sprite
+	$Sprite.scale.x = 1
+	$Sprite.scale.y = 1
+	self.add_to_group("items")
 	pass # Replace with function body.
 
 
@@ -22,18 +29,22 @@ func _ready():
 #func _process(delta):
 #	pass
 func _physics_process(delta):
-	if player.interaction_target == npc_name and Input.is_action_just_pressed("interact"):
+	if Global.mundane_item == item_name:
+		queue_free()
+	if Global.quest_stage >= 4:
+		interactable = true
+	if Global.mundane_item != "None":
+		interactable = false
+	if player.interaction_target == npc_name and Input.is_action_just_pressed("interact") and interactable:
 		start_dialog()
 	else:
 		pass
-
 func _on_InteractionZone_body_entered(body):
-	if body == player:
+	if body == player and interactable:
 		player.can_interact = true
 		player.interaction_target = npc_name
 	else:
 		pass
-
 
 func _on_InteractionZone_body_exited(body):
 	if body == player:
@@ -56,6 +67,5 @@ func end_dialog(data): # data must be here or function does not work. either a b
 
 # dialogic signal reciever
 func dialogic_signal_event(param):
-	if param == "gain insight":
-		Global.insight += 1
-		print("Insight level: " + str(Global.insight))
+	if param == "set mundane item":
+		Global.mundane_item = item_name

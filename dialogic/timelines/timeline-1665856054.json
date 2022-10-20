@@ -23,6 +23,10 @@
 			"text": "Red Mushroom grow in bunches - good for eat and for making sciences.\nMoss grow on dead trees. Good for eat and for nap.\nNoogut Feather look pretty in hair but not good for eat.\nFlub find more good things too but Flub find no reason to write them down..."
 		},
 		{
+			"emit_signal": "gain insight",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "No.",
 			"condition": "",
 			"definition": "",

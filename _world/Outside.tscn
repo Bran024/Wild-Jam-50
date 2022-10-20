@@ -11,6 +11,58 @@
 [node name="Outside" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="BG" type="ColorRect" parent="."]
+margin_left = -231.0
+margin_top = -256.0
+margin_right = 1409.0
+margin_bottom = 805.0
+color = Color( 0.192157, 0.45098, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtPath" type="ColorRect" parent="."]
+margin_left = 224.0
+margin_top = 192.0
+margin_right = 1002.0
+margin_bottom = 219.0
+color = Color( 0.72549, 0.635294, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtPath3" type="ColorRect" parent="."]
+margin_left = 224.0
+margin_top = 665.0
+margin_right = 1002.0
+margin_bottom = 692.0
+color = Color( 0.72549, 0.635294, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtPath2" type="ColorRect" parent="."]
+margin_left = 251.0
+margin_top = 219.0
+margin_right = 724.0
+margin_bottom = 246.0
+rect_rotation = 90.0
+color = Color( 0.72549, 0.635294, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtPath4" type="ColorRect" parent="."]
+margin_left = 1002.0
+margin_top = 214.0
+margin_right = 1475.0
+margin_bottom = 241.0
+rect_rotation = 90.0
+color = Color( 0.72549, 0.635294, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 475, 118 )
 texture = ExtResource( 1 )
@@ -23,21 +75,30 @@ npc_name = "Door2"
 position = Vector2( 569, 233 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+z_index = 3
 
 [node name="Mushroom" parent="." instance=ExtResource( 5 )]
-position = Vector2( 731, -6 )
-component_amount = 2
+position = Vector2( 791, -49 )
+component_amount = 1
+
+[node name="Mushroom4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 894, 112 )
+component_amount = 1
+
+[node name="Mushroom5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1271, -20 )
+component_amount = 1
 
 [node name="Mushroom2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1082, 160 )
-component_amount = 2
+component_amount = 1
 
 [node name="Mushroom3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1031, -44 )
 component_amount = 1
 
 [node name="Feather" parent="." instance=ExtResource( 6 )]
-position = Vector2( 576, 520 )
+position = Vector2( 889, 731 )
 component_amount = 1
 
 [node name="Feather2" parent="." instance=ExtResource( 6 )]
@@ -49,13 +110,25 @@ position = Vector2( 890, 594 )
 component_amount = 1
 
 [node name="Moss" parent="." instance=ExtResource( 7 )]
-position = Vector2( 260, 150 )
-component_amount = 2
+position = Vector2( 182, 240 )
+component_amount = 1
 
 [node name="Moss2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 66, 235 )
-component_amount = 2
+component_amount = 1
 
 [node name="Moss3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 168, 361 )
-component_amount = 2
+component_amount = 1
+
+[node name="Moss4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 42, 432 )
+component_amount = 1
+
+[node name="Moss5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -71, 362 )
+component_amount = 1
+
+[node name="Moss6" parent="." instance=ExtResource( 7 )]
+position = Vector2( -112, 254 )
+component_amount = 1

@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Master requires your assistance in the den!*"
+		},
+		{
+			"emit_signal": "move player",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666247136.json",
+		"name": "Blocker0"
+	}
+}

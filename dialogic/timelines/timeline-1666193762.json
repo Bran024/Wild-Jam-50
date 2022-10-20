@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Add the tinder to the fire once you've gathered 3 bundles."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666193762.json",
+		"name": "Cauldron5"
+	}
+}

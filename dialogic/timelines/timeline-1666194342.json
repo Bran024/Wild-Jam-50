@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The balm is not hot enough. Return when you have found a suitable vessel to hide my essence."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666194342.json",
+		"name": "Cauldron7"
+	}
+}

@@ -15,23 +15,25 @@ var dialog_index := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.intro_complete == false:
+	if !Global.intro_complete:
 		self.add_to_group(npc_name)
 	if self.is_in_group(npc_name):
 		introduction()
 	if Global.intro_complete and dialog_index == 0:
 		dialog_index = 1
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 func _physics_process(delta):
+	if Global.quest_stage == 2 and player.components_gathered:
+		dialog_index = 3
 	if dialog_index == 0 and Global.quest_stage == 0:
 		start_dialog()
 	if player.components_gathered and Global.quest_stage == 3:
 		dialog_index = 3
+	if Global.quest_stage == 4 and Global.mundane_item == "None":
+		dialog_index = 7
+	if Global.quest_stage == 4 and Global.mundane_item != "None":
+		dialog_index = 8
 	if player.interaction_target == npc_name and Input.is_action_just_pressed("interact"):
 		start_dialog()
 	else:
@@ -61,6 +63,10 @@ func _on_InteractionZone_body_exited(body):
 
 # dialogic function to begin dialog
 func start_dialog():
+	if Global.quest_stage == 3 and Global.tinder < 3:
+		dialog_index = 5
+	if Global.quest_stage == 3 and Global.tinder >= 3:
+		dialog_index = 6
 	var dialog = Dialogic.start(npc_name + str(dialog_index)) # change input of function to change dialogic
 	dialog.pause_mode = PAUSE_MODE_PROCESS
 	get_parent().add_child(dialog)
@@ -78,12 +84,12 @@ func dialogic_signal_event(param):
 		Global.intro_complete = true
 	if param == "increase quest progress":
 		Global.quest_stage += 1
+		print("quest stage: " + str(Global.quest_stage))
 	if param == "increase dialog index":
 		dialog_index += 1
-		print("Player quest stage is: " + str(Global.quest_stage))
-	if param == "take components":
-		player.mushrooms = 0
-		player.feathers = 0
-		player.moss = 0
-	if param == "end demo":
+	if param == "game ending one":
+		get_tree().change_scene("res://Main.tscn")
+	if param == "game ending two":
+		get_tree().change_scene("res://Main.tscn")
+	if param == "game ending three":
 		get_tree().change_scene("res://Main.tscn")

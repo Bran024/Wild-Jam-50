@@ -1,13 +1,23 @@
 {
 	"events": [
 		{
-			"character": "character-1665788999.json",
+			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "**Ready for next step**"
+			"text": "*You drop in the foraged components and watch as they dissolve nearly instantly.*"
 		},
 		{
 			"emit_signal": "increase quest progress",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now, gather some kindling from the tinderbox in the kitchen.\nAdd it to the fire below me- er...\nBelow the cauldron and wait a few moments while the balm within comes to a boil.\n3 bundles ought to do, thank you very much!"
+		},
+		{
+			"emit_signal": "increase dialog index",
 			"event_id": "dialogic_040"
 		}
 	],

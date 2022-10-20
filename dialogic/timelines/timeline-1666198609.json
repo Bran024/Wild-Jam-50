@@ -1,0 +1,102 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You have figured me out. So be it.\nWhat happens now, dear assistant? Do you leave me in this cauldron to rust and rot? Another will come someday and they will not be as clever as you.\nWill you send me back to my withered mortal coil? I do not think you have the gall to strangle a feeble old man, even in these circumstances.\nIf you leave me to live, I will curse you and your bloodline for generations."
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "So, what will it be?"
+		},
+		{
+			"choice": "*Trap Master within the mundane item*",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You pluck a hair from master's corpse and drop it into the cauldron, immediately dipping in the object that you selected.*\n*A whispered scream wafts from the object as you hold it in your hand.*\n*This is the end.*"
+		},
+		{
+			"change_scene": "res://_world/EndingTwo.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "*Return Master to their frail corpse*",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "*Kill the old hermit or spare their  life?"
+		},
+		{
+			"choice": "Spare them.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://_world/EndingTwo.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Kill them.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://_world/EndingOne.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "*Leave Master to rot*",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Your former master shouts curses and swear words as you gather your belongings and leave the hut behind.*"
+		},
+		{
+			"change_scene": "res://_world/EndingTwo.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666198609.json",
+		"name": "Cauldron12"
+	}
+}

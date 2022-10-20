@@ -1,0 +1,56 @@
+{
+	"events": [
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "The balm is hot enough, assistant.\nPlease, present the object you have chosen and we will continue on to the next step of the ritual."
+		},
+		{
+			"choice": "Yes, Master.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "An... interesting choice, my dear assistant, but it certainly will do."
+		},
+		{
+			"change_timeline": "timeline-1666195201.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "I have not chosen an object.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "*Confront Master*",
+			"condition": ">",
+			"definition": "1666194922-648",
+			"event_id": "dialogic_011",
+			"value": "2"
+		},
+		{
+			"change_timeline": "timeline-1666195212.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666194512.json",
+		"name": "Cauldron8"
+	}
+}

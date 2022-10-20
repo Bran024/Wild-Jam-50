@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Kenney High.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://_world/ending.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="EndingThree" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.105882, 0.0627451, 0.0627451, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = "This is the end."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 54.0
+margin_right = 40.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 2 )
+text = "Your former master has taken your corporeal form and strangled you to death after
+you awoke within their feeble, aged body.
+
+one can only hope that their next assistant does not befall the same fate."
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -165.5
+margin_top = -88.0
+margin_right = 165.5
+custom_fonts/font = SubResource( 3 )
+text = "ending 3/3"
+
+[node name="Main" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -92.0
+margin_top = -63.0
+margin_right = -3.0
+margin_bottom = -36.0
+custom_fonts/font = SubResource( 4 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -69.0
+margin_top = -33.0
+margin_right = -26.0
+margin_bottom = -6.0
+custom_fonts/font = SubResource( 5 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 1023.0
+margin_top = 689.0
+margin_right = 1207.0
+margin_bottom = 720.0
+text = "disabled for web export  ->
+return to main menu instead"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

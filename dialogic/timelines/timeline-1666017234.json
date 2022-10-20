@@ -23,6 +23,10 @@
 			"text": "I cannot take another day trapped in this fragile vessel. My apprentice, while surely helpful to have around, has something that I want.\nA young, healthy body.\nI have gathered materials and intend to perform the ritual to transfer my spirit into his corporeal vessel the next day they go to town for errands.\nHow strange it will be to strangle another's life from my own body..."
 		},
 		{
+			"emit_signal": "gain insight",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "No.",
 			"condition": "",
 			"definition": "",

@@ -64,7 +64,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "**For the purpose of this demonstration, all materials are placed nearby**\n** mushrooms \"east\" of the cauldron, feathers \"south\" of mushrooms\nmoss \"west\" of the feathers and cauldron \"north\" of moss. **"
+			"text": "**For the purpose of this demonstration, all materials are placed nearby outside the hut**\n** mushrooms \"east\" of the hut, feathers \"south\" of mushrooms, moss \"west\" of the feathers, and hut \"east\" of moss. **"
 		},
 		{
 			"character": "character-1665788999.json",

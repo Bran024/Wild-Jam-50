@@ -23,6 +23,9 @@ __meta__ = {
 [node name="BG" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -9.0
+margin_top = -20.0
+margin_right = 22.0
 color = Color( 0.376471, 0.0901961, 0.145098, 0.117647 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -31,7 +34,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_left = 13.0
 margin_top = 33.0
-margin_right = 420.0
+margin_right = 505.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 1 )
 text = "Master's phylactery"
@@ -42,9 +45,8 @@ __meta__ = {
 [node name="Label3" type="Label" parent="."]
 margin_left = 730.0
 margin_top = 501.0
-margin_right = 1199.0
+margin_right = 1222.0
 margin_bottom = 722.0
-rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 1 )
 text = "Thanks (so far):
 Kenney.nl (fonts)
@@ -57,7 +59,7 @@ __meta__ = {
 [node name="Label2" type="Label" parent="."]
 margin_left = 13.0
 margin_top = 135.0
-margin_right = 495.0
+margin_right = 505.0
 margin_bottom = 412.0
 custom_fonts/font = SubResource( 1 )
 text = "W A S D      TO MOVE
@@ -76,5 +78,12 @@ margin_right = 899.0
 margin_bottom = 279.0
 custom_fonts/font = SubResource( 2 )
 text = "START GAME"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 647, 351 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -7,6 +7,11 @@ onready var player = get_parent().find_node("Player")
 export(int) var component_amount
 
 var harvestable = false
+var interactable := false
+
+func _ready():
+	if Global.quest_stage >= 2:
+		interactable = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,12 +26,10 @@ func _physics_process(delta):
 
 
 func _on_InteractionZone_body_entered(body):
-	if body == player:
+	if body == player and interactable:
 		harvestable = true
 		player.harvest_target = component_type
 		player.can_harvest = true
-		print(player.can_harvest)
-		print(player.harvest_target)
 	else:
 		pass # Replace with function body.
 

@@ -1,0 +1,98 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1666198493-787",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The next few steps are the most important, my dear assistant.\nFirst, pluck a hair from my resting body and drop it into the balm."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You pluck a silver strand from your master's cadaver and add it to the bubbling cauldron.*\n*The balm hisses as the hair sinks in and the odor of wet dog fills the air.*"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Excellent, assistant!\nDip in your fingers and draw a cross upon the surface of the object you have selected as my vessel."
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Now, the balm is quite warm so do be careful!"
+		},
+		{
+			"choice": "*Dip your fingers into the balm as you are told*",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "dipped"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*No sooner than the instant your fingers touch the surface of the squelching balm within the cauldron, you hear an eruption of laughter and your vision goes black as you feel the world fall from beneath your feet*"
+		},
+		{
+			"choice": "*Hesitate*",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "While the balm is warm, only a moment of temporary uncomfort to save your beloved master!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*It is only a moment of temporary discomfort to greatly aid one that has taught you much,*"
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_timeline": "timeline-1666195207.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666195201.json",
+		"name": "Cauldron9"
+	}
+}

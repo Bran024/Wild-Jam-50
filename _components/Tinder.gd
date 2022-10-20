@@ -2,18 +2,23 @@ extends Area2D
 
 onready var player = get_parent().find_node("Player")
 
-
-export(String) var component_type
+const component_type := "Tinder"
 
 export(int) var component_amount
 
-var harvestable = false
+var harvestable := false
+var interactable := false
 
+func _ready():
+	if Global.tinder_collected:
+		component_amount = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if Global.quest_stage >= 3:
+		interactable = true
 	if harvestable and Input.is_action_just_pressed("interact"):
-		player.mushrooms += 1
+		Global.tinder += 1
 		component_amount -= 1
 	if component_amount <= 0:
 		_on_InteractionZone_body_exited(player)
@@ -22,12 +27,10 @@ func _physics_process(delta):
 
 
 func _on_InteractionZone_body_entered(body):
-	if body == player:
+	if body == player and interactable:
 		harvestable = true
 		player.harvest_target = component_type
 		player.can_harvest = true
-		print(player.can_harvest)
-		print(player.harvest_target)
 	else:
 		pass # Replace with function body.
 

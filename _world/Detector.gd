@@ -1,44 +1,21 @@
 extends Area2D
 
+const npc_name := "Blocker"
+const dialog_index := 0
+
 onready var player = get_parent().find_node("Player")
-
-export(String) var npc_name
-
-var dialog_index := 0
-
-
+onready var detector_spot = get_parent().find_node("DetectorSpot")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	self.add_to_group("books")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 func _physics_process(delta):
-	if player.interaction_target == npc_name and Input.is_action_just_pressed("interact"):
-		start_dialog()
+	if Global.quest_stage >= 2:
+		$CollisionShape2D.set_deferred("disabled", true)
 	else:
-		pass
-
-func _on_InteractionZone_body_entered(body):
-	if body == player:
-		player.can_interact = true
-		player.interaction_target = npc_name
-	else:
-		pass
-
-
-func _on_InteractionZone_body_exited(body):
-	if body == player:
-		player.can_interact = false
-		player.interaction_target = "None"
+		$CollisionShape2D.set_deferred("disabled", false)
 	pass # Replace with function body.
 
 # dialogic function to begin dialog
@@ -56,6 +33,15 @@ func end_dialog(data): # data must be here or function does not work. either a b
 
 # dialogic signal reciever
 func dialogic_signal_event(param):
-	if param == "gain insight":
-		Global.insight += 1
-		print("Insight level: " + str(Global.insight))
+	if param == "move player":
+		player.global_position = detector_spot.global_position
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_Detector_body_entered(body):
+	if body == player:
+		start_dialog()
+	else:
+		pass

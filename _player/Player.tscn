@@ -2,7 +2,7 @@
 
 [ext_resource path="res://_player/Player.gd" type="Script" id=1]
 [ext_resource path="res://_player/player.png" type="Texture" id=2]
-[ext_resource path="res://_player/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://_components/tinder.png" type="Texture" id=3]
 [ext_resource path="res://Kenney High.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://_components/mushroom_red.png" type="Texture" id=5]
 [ext_resource path="res://_components/feather_reg.png" type="Texture" id=6]
@@ -50,15 +50,13 @@ margin_left = -30.0
 margin_top = -66.0
 margin_right = -30.0
 margin_bottom = -66.0
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Inventory"]
-margin_left = -20.0
+margin_left = -40.0
 margin_top = -20.0
-margin_right = 20.0
 margin_bottom = -20.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -106,6 +104,26 @@ texture = ExtResource( 6 )
 centered = false
 
 [node name="Label" type="Label" parent="Inventory/HBoxContainer/Feathers"]
+margin_left = -20.0
+margin_top = -1.5
+margin_right = 36.0
+margin_bottom = 44.5
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tinder" type="Sprite" parent="Inventory/HBoxContainer"]
+position = Vector2( 103, 0 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Label" type="Label" parent="Inventory/HBoxContainer/Tinder"]
 margin_left = -20.0
 margin_top = -1.5
 margin_right = 36.0

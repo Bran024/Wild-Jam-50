@@ -1,0 +1,93 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You confront  your master about the tomes you have found open around the cottage.*"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You insolent whelp!\nMy quarters are strictly forbidden!\nThere are powers in this world well beyond your comprehension.\nPracticers like myself are the thin line of defense that keep those powers from piercing the veil and ending life as we know it.\nSacrifices must be made."
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "What say you, my assistant? Does your desire to continue living a meager life outweigh needs of the world?"
+		},
+		{
+			"choice": "Agree that sacrifices must be made.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Shall we reconsider?"
+		},
+		{
+			"choice": "Yes, this is the right thing to do.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1666198493-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"change_timeline": "timeline-1666195207.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "No. You are a snake.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1666198609.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "No. You are a snake.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1666198609.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666195212.json",
+		"name": "Cauldron11"
+	}
+}

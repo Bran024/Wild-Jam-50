@@ -1,0 +1,29 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You add the tinder to the bed of embers below the cauldron.*"
+		},
+		{
+			"character": "character-1665788999.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thank you, assistant. While we wait, I need you to gather the final component for this ritual.\nAny mundane object will do. The more unassuming the better, as it will serve as the eternal vessel to a small portion of my life essence, should any unfortunate events become my corporeal form.\nReturn to me when you have chosen the object and hopefully the brew will be of sufficient heat by then.\n...\nOne last thing: this should go without saying, my dearest assistant, but please remember you are forbidden from entering my quarters.\nThese unusual circumstances do not permit the undermining of that crucial rule!"
+		},
+		{
+			"emit_signal": "increase dialog index",
+			"event_id": "dialogic_040"
+		},
+		{
+			"emit_signal": "increase quest progress",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666193876.json",
+		"name": "Cauldron6"
+	}
+}

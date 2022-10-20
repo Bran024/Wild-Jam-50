@@ -39,6 +39,10 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"emit_signal": "increase dialog index",
+			"event_id": "dialogic_040"
+		},
+		{
 			"change_timeline": "timeline-1666022298.json",
 			"event_id": "dialogic_020"
 		}

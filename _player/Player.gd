@@ -8,9 +8,7 @@ var velocity := Vector2()
 var mushrooms := 0
 var moss := 0
 var feathers := 0
-var alt_mushroom := 0
-var alt_moss := 0
-var alt_feathers := 0
+var tinder := 0
 
 var inventory_opened := false
 
@@ -24,17 +22,19 @@ var components_gathered := false
 
 func _ready():
 	global_position = spawn.global_position
-	print("Player quest stage is: " + str(Global.quest_stage))
 	$Inventory.set_deferred("visible", false)
 
 func _physics_process(_delta):
 	mushrooms = Global.mushrooms
 	moss = Global.moss
 	feathers = Global.feathers
+	tinder = Global.tinder
 	if mushrooms + moss + feathers >= 14:
 		components_gathered = true
-	if can_interact or can_harvest:
-		$Label.set_text("Press 'E'")
+	if can_interact:
+		$Label.set_text("Press 'E' to Interact")
+	if can_harvest:
+		$Label.set_text("Press 'E' to Harvest")
 	if !can_interact and !can_harvest:
 		$Label.set_text("")
 		pass
@@ -42,6 +42,7 @@ func _physics_process(_delta):
 	$Inventory/HBoxContainer/Feathers/Label.set_text(str(feathers))
 	$Inventory/HBoxContainer/Moss/Label.set_text(str(moss))
 	$Inventory/HBoxContainer/Mushrooms/Label.set_text(str(mushrooms))
+	$Inventory/HBoxContainer/Tinder/Label.set_text(str(tinder))
 	open_inventory()
 	move_player()
 	

@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*As you regain your senses, you feel a presence nearby.*\n*Your vision focuses on a very familiar face, but it takes a few seconds for you to recognize it as your own.*"
+		},
+		{
+			"character": "character-1666196897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, my dear, gullable assistant."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Master's voice slither's out of your mouth, which is formed into a malicious grin.*"
+		},
+		{
+			"character": "character-1666196897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your aid has been greatly beneficial.\nUnfortunately, I do not have much use for a frail old man.\nYour service will not be forgotten."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Masters hands firmly grasp your throat as they lean in closer.*"
+		},
+		{
+			"character": "character-1666196897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Fret not, dear old man.\nI will lie you to rest in a shady grove.\nYou can rest now."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Master's grip tightens and, struggle as you might, the body you find yourself trapped in is weak.*\n*Your vision fades as you stare into your own eyes, filled with evil and darkness.*\n*The world goes dark and the ground grows cold beneath you.*"
+		},
+		{
+			"change_scene": "res://_world/EndingOne.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.4",
+		"file": "timeline-1666195207.json",
+		"name": "Cauldron10"
+	}
+}
