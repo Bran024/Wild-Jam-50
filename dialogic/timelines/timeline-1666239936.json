@@ -2,12 +2,18 @@
 	"events": [
 		{
 			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*You pick a golden goblet studded with gaudy fake gems.*"
+		},
+		{
+			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "*You pick up a commode brush, it's speckled with nasty and mold.*\nChoose this item as the vessel for your master?"
+			"question": "Choose this item as the vessel for your master?"
 		},
 		{
 			"choice": "Yes.",

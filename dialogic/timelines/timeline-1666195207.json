@@ -43,7 +43,7 @@
 			"text": "*Master's grip tightens and, struggle as you might, the body you find yourself trapped in is weak.*\n*Your vision fades as you stare into your own eyes, filled with evil and darkness.*\n*The world goes dark and the ground grows cold beneath you.*"
 		},
 		{
-			"change_scene": "res://_world/EndingOne.tscn",
+			"change_scene": "res://_world/EndingThree.tscn",
 			"event_id": "dialogic_041"
 		}
 	],

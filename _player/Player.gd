@@ -1,9 +1,12 @@
 extends KinematicBody2D
 
 onready var spawn = get_parent().find_node("Spawn")
+onready var animation_player = $AnimationPlayer
 
 var speed := 200
 var velocity := Vector2()
+var input_vector := Vector2()
+
 
 var mushrooms := 0
 var moss := 0
@@ -21,10 +24,12 @@ var interaction_target := "None"
 var components_gathered := false
 
 func _ready():
+	animation_player.play("idle")
 	global_position = spawn.global_position
 	$Inventory.set_deferred("visible", false)
 
 func _physics_process(_delta):
+	$Sprite.flip_h = false
 	mushrooms = Global.mushrooms
 	moss = Global.moss
 	feathers = Global.feathers
@@ -49,7 +54,6 @@ func _physics_process(_delta):
 	
 	
 func move_player():
-	var input_vector := Vector2()
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	if input_vector != Vector2.ZERO:
@@ -58,12 +62,9 @@ func move_player():
 		velocity = Vector2.ZERO * speed
 
 	velocity = velocity.normalized()
-	if input_vector.y <= 0:
-		$Sprite.frame = 1
-	if input_vector.y >= 0:
-		$Sprite.frame = 0
-	
+
 	move_and_slide(velocity * speed)
+	animate()
 
 func open_inventory():
 	var inventory_button = Input.get_action_strength("inventory")
@@ -72,7 +73,26 @@ func open_inventory():
 	else:
 		inventory_opened = false
 
-#func clear_components():
-#	mushrooms = 0
-#	moss = 0
-#	feathers = 0
+func animate():
+	var last_dir
+	$Sprite.flip_h = false
+	if input_vector.x < 0 and input_vector.y <= 0:
+		last_dir = "left"
+		$Sprite.flip_h = true
+		animation_player.play("run right")
+	elif input_vector.x > 0 and input_vector.y <= 0:
+		last_dir = "right"
+		animation_player.play("run right")
+	elif input_vector.y > 0:
+		last_dir = "down"
+		animation_player.play("down")
+	elif input_vector.y < 0:
+		last_dir = "down"
+		animation_player.play("down")
+	elif input_vector == Vector2.ZERO and last_dir == "left":
+		$Sprite.flip_h = true
+		animation_player.play("idle_right")
+	elif input_vector == Vector2.ZERO and last_dir == "right":
+		animation_player.play("run right")
+	else:
+		animation_player.play("idle")

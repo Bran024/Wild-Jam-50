@@ -37,21 +37,7 @@ margin_top = 33.0
 margin_right = 505.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 1 )
-text = "Master's phylactery"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 730.0
-margin_top = 501.0
-margin_right = 1222.0
-margin_bottom = 722.0
-custom_fonts/font = SubResource( 1 )
-text = "Thanks (so far):
-Kenney.nl (fonts)
-Emilio Coppola (dialogic)
-"
+text = "Master's favor"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,7 +52,22 @@ text = "W A S D      TO MOVE
 E                 TO INTERACT
 TAB            OPEN INVENTORY
 
-TECHNICAL DEMONSTRATION"
+godot wild jam 50"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 763.0
+margin_top = 426.0
+margin_right = 1255.0
+margin_bottom = 703.0
+custom_fonts/font = SubResource( 1 )
+text = "Thanks (so far):
+Kenney.nl (fonts)
+Emilio Coppola (dialogic)
+Teaviie (Main Character)
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -78,12 +79,11 @@ margin_right = 899.0
 margin_bottom = 279.0
 custom_fonts/font = SubResource( 2 )
 text = "START GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 647, 351 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

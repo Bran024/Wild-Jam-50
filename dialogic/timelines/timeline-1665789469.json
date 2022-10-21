@@ -46,7 +46,7 @@
 			"character": "character-1665788999.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "In another vessel should something unfortunate happen to my corporeal form.\nRegardless, it appears I have, in fact, transformed my life essence INTO a balm.\nThe good news, my dear and faithful assistant, is that there surely is a solution.\nThe bad news is that I, as a half-rusted cauldron,, have nary the means to gather the necessary materials.\nYou will have to do my bidding, dear assistant."
+			"text": "In another vessel should something unfortunate happen to my corporeal form.\nRegardless, it appears I have, in fact, transformed my life essence INTO a balm.\nThe good news, my dear and faithful assistant, is that there surely is a solution.\nThe bad news is that, as a half-rusted cauldron, I have nary the means to gather the necessary materials.\nYou will have to do my bidding, dear assistant."
 		},
 		{
 			"character": "character-1665787536.json",
@@ -58,19 +58,7 @@
 			"character": "character-1665788999.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Fetch 5 mushrooms, 6 bundlings of moss and 3 Noogut feathers."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "**For the purpose of this demonstration, all materials are placed nearby outside the hut**\n** mushrooms \"east\" of the hut, feathers \"south\" of mushrooms, moss \"west\" of the feathers, and hut \"east\" of moss. **"
-		},
-		{
-			"character": "character-1665788999.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Return to me when you have gathered the materials."
+			"text": "Fetch 5 mushrooms, 6 bundlings of moss and 3 bright feathers.\nYou should find everything in abundance in the forest nearby.\nReturn to me when you have gathered the materials and we shall move on to the next phase."
 		},
 		{
 			"emit_signal": "increase dialog index",

@@ -4,7 +4,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "*You pick up a polished silver candelabra.*"
+			"text": "*You pick up a silver hilted dagger.*"
 		},
 		{
 			"character": "",
@@ -13,10 +13,10 @@
 
 			],
 			"portrait": "",
-			"question": "Choose this item as the vessel for your master?"
+			"question": "Choose this as the vessel for your master?"
 		},
 		{
-			"choice": "Yes,",
+			"choice": "Yes.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -39,7 +39,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.4",
-		"file": "timeline-1666240641.json",
-		"name": "Item20"
+		"file": "timeline-1666325184.json",
+		"name": "Item30"
 	}
 }

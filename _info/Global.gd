@@ -27,6 +27,7 @@ func _physics_process(delta):
 		tinder_collected
 	if quest_stage >= 4:
 		tinder = 0
+		tinder_collected = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
