@@ -16,6 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if harvestable and Input.is_action_just_pressed("interact"):
+		player.play_sound()
 		Global.feathers += 1
 		component_amount -= 1
 	if component_amount <= 0:

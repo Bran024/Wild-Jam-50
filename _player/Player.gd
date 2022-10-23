@@ -1,7 +1,9 @@
 extends KinematicBody2D
 
+
 onready var spawn = get_parent().find_node("Spawn")
-onready var animation_player = $AnimationPlayer
+onready var animation = $AnimationPlayer
+onready var audio = $AudioStreamPlayer2D
 
 var speed := 200
 var velocity := Vector2()
@@ -24,7 +26,7 @@ var interaction_target := "None"
 var components_gathered := false
 
 func _ready():
-	animation_player.play("idle")
+	animation.play("idle")
 	global_position = spawn.global_position
 	$Inventory.set_deferred("visible", false)
 
@@ -37,9 +39,9 @@ func _physics_process(_delta):
 	if mushrooms + moss + feathers >= 14:
 		components_gathered = true
 	if can_interact:
-		$Label.set_text("Press 'E' to Interact")
+		$Label.set_text("Press 'F' to Interact")
 	if can_harvest:
-		$Label.set_text("Press 'E' to Harvest")
+		$Label.set_text("Press 'F' to Harvest")
 	if !can_interact and !can_harvest:
 		$Label.set_text("")
 		pass
@@ -79,20 +81,23 @@ func animate():
 	if input_vector.x < 0 and input_vector.y <= 0:
 		last_dir = "left"
 		$Sprite.flip_h = true
-		animation_player.play("run right")
+		animation.play("run right")
 	elif input_vector.x > 0 and input_vector.y <= 0:
 		last_dir = "right"
-		animation_player.play("run right")
+		animation.play("run right")
 	elif input_vector.y > 0:
 		last_dir = "down"
-		animation_player.play("down")
+		animation.play("down")
 	elif input_vector.y < 0:
 		last_dir = "down"
-		animation_player.play("down")
+		animation.play("run up")
 	elif input_vector == Vector2.ZERO and last_dir == "left":
 		$Sprite.flip_h = true
-		animation_player.play("idle_right")
+		animation.play("idle_right")
 	elif input_vector == Vector2.ZERO and last_dir == "right":
-		animation_player.play("run right")
+		animation.play("idle_right")
 	else:
-		animation_player.play("idle")
+		animation.play("idle")
+
+func play_sound():
+	audio.play()

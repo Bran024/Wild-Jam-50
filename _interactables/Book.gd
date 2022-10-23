@@ -58,4 +58,3 @@ func end_dialog(data): # data must be here or function does not work. either a b
 func dialogic_signal_event(param):
 	if param == "gain insight":
 		Global.insight += 1
-		print("Insight level: " + str(Global.insight))
